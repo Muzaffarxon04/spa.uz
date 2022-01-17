@@ -34,7 +34,9 @@ headerNav.addEventListener('click', (evt) =>{
 
 
 
-var count = new Date("jan 01, 2022, 22:59:00").getTime();
+var year = new Date().getFullYear()+1;
+
+var count = new Date(`jan 01, ${year}, 00:00:00`).getTime();
 var x = setInterval(function(){
     var now = new Date().getTime();
     var d = count - now;
